@@ -18,7 +18,7 @@ class AccountSerializer(serializers.ModelSerializer):
 
         def update(self, instance, validated_data):
             instance.username = validated_data.get('username', instance.username)
-            instance.tagline = validated_data.get('username', instance.tagline)
+            instance.tagline = validated_data.get('tagline', instance.tagline)
 
             instance.save()
 
